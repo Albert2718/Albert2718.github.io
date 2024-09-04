@@ -1,0 +1,5 @@
+site_name: Albert's Moonnote
+# site_url: 网站链接
+site_author: Albert
+theme:
+  name: material #主题
