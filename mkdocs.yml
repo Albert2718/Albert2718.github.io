@@ -1,9 +1,18 @@
-site_name: Albert's Moonnote
+site_name: Albert's MoonBox
 site_url: https://Albert2718.github.io
 site_author: Albert
 theme:
   name: material #主题
+nav: 
+  - 主页: index.md
+  - 课程笔记:
+    - 天文学导论: 
+      - 第一章: notes/天文学导论/chapter-1.md
+    
+
+
 extra_css:
+  - stylesheets/extra.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css

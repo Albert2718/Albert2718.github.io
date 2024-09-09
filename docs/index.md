@@ -1,17 +1,8 @@
-# Welcome to MkDocs
+# 欢迎！
+欢迎来到我的月光宝盒~   
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+宝盒之上刻着一句梵文：般若波罗蜜(prajñā-pāramitā)：
 
-## Commands
+“般若”代表深刻的智慧，“波罗蜜”意味着到达彼岸。  
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+愿你我终将抵达彼岸~  
