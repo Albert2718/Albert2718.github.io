@@ -3,7 +3,7 @@ site_url: https://Albert2718.github.io
 site_author: Albert
 nav: 
   - 主页: 
-    - 欢迎!: homepage/index.md
+    - 欢迎!: index.md
     - 计划更新: homepage/recent.md
   - 课程笔记:
     - 大物实验:
