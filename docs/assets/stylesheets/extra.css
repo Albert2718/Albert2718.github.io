@@ -58,10 +58,11 @@ a:active {
 }
 
 /* 强调文本（strong 元素）添加轻微的阴影效果 */
-strong {
-    text-shadow: 0.7px 0px;
+/* strong {
+    text-shadow: 0.7px 0px; 
+   
+} */
     /* text-shadow: 0 0 1px #ffffff; */
-}
 
 /* 动画部分被注释掉的代码，用于定义一个动画效果 */
 /* #animation 元素会在页面中四个不同的点来回移动并更改背景颜色 */

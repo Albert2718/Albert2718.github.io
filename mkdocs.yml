@@ -4,6 +4,7 @@ site_author: Albert
 nav: 
   - 主页: 
     - 欢迎!: index.md
+    - 关于我: about.md
     - 计划更新: recent.md
   - 课程笔记:
     - 大物实验:
@@ -90,17 +91,17 @@ markdown_extensions:
       permalink: "\ue157"
 
 extra_javascript:
-  - javascripts/extra.js  #自定义javascript
-  - javascripts/mathjax.js  #Latex支持
-  - https://polyfill.io/v3/polyfill.min.js?features=es6   #Latex支持
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js   #Latex支持
-  - ckplayer/js/ckplayer.js #播放器配置
-  - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js  #gitalk支持
-  - https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js #忘了
+  - assets/javascripts/katex.js 
+  - assets/javascripts/mathjax.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
      
 extra_css:
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css
