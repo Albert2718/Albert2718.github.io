@@ -1,10 +1,185 @@
-button.md-top {
-    font-family: LXGW WenKai; /* 修改字体 */
-    font-size: 18px; /* 修改字体大小 */
-    font-weight: lighter;/* 修改字体粗细 */
-    color: #518FC1; /* 修改字体颜色 */
+/* 格式借鉴于https://github.com/JiepengLab/notebook ,注释使用ChatGPT-4o */
+body {
+    font-family: "LXGW WenKai", sans-serif;
+    /* Lite version */
+    /* font-family: "LXGW WenKai Lite", sans-serif; */
+    /* TC version */
+    /* font-family: "LXGW WenKai TC", sans-serif; */
+    /* Screen version */
+    /* font-family: "LXGW WenKai Screen", sans-serif; */
+}
+
+/* 数学公式相关元素，隐藏垂直滚动条 */
+.md-typeset div.arithmatex {
+    overflow-y: hidden;
+}
+
+/* 所有直接跟在 h1 标签后面的 p 段落设置首行缩进 30px */
+/* h1~p {
+    text-indent: 30px;
+} */
+
+/* 图片样式：圆角设置为10px，默认注释掉的边框样式 */
+img {
+    border-radius: 10px;
+    /* border-style: solid 2px #000000; */
+}
+
+/* div 中所有类名为空的 p 元素设置首行缩进 20px */
+/* div p[class^=""] {
+    text-indent: 20px;
+} */
+
+/* 包含图片的段落（p 元素）不进行缩进，图片居中显示 */
+p:has(img) {
+    /* width: 80%; */
+    text-indent: 0px;
+    text-align: center;
+}
+
+/* 链接样式：未访问的链接无下划线 */
+a:link {
+    text-decoration: none;
+}
+
+/* 已访问的链接无下划线 */
+a:visited {
+    text-decoration: none;
+}
+
+/* 鼠标悬停时，链接添加下划线 */
+a:hover {
+    text-decoration: underline;
+}
+
+/* 点击中的链接状态，添加下划线 */
+a:active {
+    text-decoration: underline;
+}
+
+/* 强调文本（strong 元素）添加轻微的阴影效果 */
+strong {
+    text-shadow: 0.7px 0px;
+    /* text-shadow: 0 0 1px #ffffff; */
+}
+
+/* 动画部分被注释掉的代码，用于定义一个动画效果 */
+/* #animation 元素会在页面中四个不同的点来回移动并更改背景颜色 */
+/*
+  #animation {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    border-radius: 5px;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+    resize: both;
+    overflow: auto;;
+    max-width: 100px;
   }
   
-  :root {
-  --md-text-font: "LXGW WenKai"; 
-  } /* 字体 */
+  #animation:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes example {
+    0%   {background-color:red; left:0%; top:0px;}
+    25%  {background-color:yellow; left:85%; top:0px;}
+    50%  {background-color:blue; left:0%; top:0px;}
+    75%  {background-color:green; left:85%; top:0px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+  */
+
+/* 引入的部分样式，用于 "友情链接" 列表样式 */
+/* .flink-list {
+    overflow: auto;
+    padding: 10px 10px 0;
+    text-align: center;
+}
+
+.flink-list a {
+    color: #4a4a4a;
+}
+
+[data-md-color-scheme="slate"] .flink-list a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.flink-list-item {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 15px 7px;
+    width: calc(100% / 2 - 15px);
+    height: 90px;
+    border-radius: 8px;
+    line-height: 17px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    transition: 0.25s;
+}
+
+.flink-item-icon {
+    float: left;
+    overflow: hidden;
+    margin: 15px 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 35px;
+}
+
+.flink-item-name {
+    padding: 19px 10px 0 0;
+    height: 40px;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.flink-item-desc {
+    padding: 13px 10px 16px 0;
+    height: 50px;
+    font-size: 0.93em;
+}
+
+.flink-list-item:hover {
+    background-color: rgba(128, 118, 105, .1);
+}
+
+.flink-list-item {
+    width: calc(50% - 15px) !important;
+}
+
+@media screen and (max-width: 1310px) {
+    .flink-list-item {
+        width: calc(100% - 15px) !important;
+    }
+}
+
+@media screen and (max-width: 1219px) {
+    .flink-list-item {
+        width: calc(50% - 15px) !important;
+    }
+}
+
+@media screen and (max-width: 1027px) {
+    .flink-list-item {
+        width: calc(100% - 15px) !important;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .flink-list-item {
+        width: calc(50% - 15px) !important;
+    }
+}
+
+@media screen and (max-width: 692px) {
+    .flink-list-item {
+        width: calc(100% - 15px) !important;
+    }
+} */
