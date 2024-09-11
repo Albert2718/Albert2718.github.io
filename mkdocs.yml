@@ -6,8 +6,10 @@ nav:
     - 欢迎!: homepage/index.md
     - 计划更新: homepage/recent.md
   - 课程笔记:
+    - 大物实验:
+      - 绪论: notes/phylab/chapter_0.md
     - 天文学导论: 
-      - 第一章: notes/天文学导论/chapter-1.md  
+      - 第一章: notes/astronomy/chapter_1.md  
 
 theme:
   name: material #主题
