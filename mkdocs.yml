@@ -4,7 +4,7 @@ site_author: Albert
 nav: 
   - 主页: 
     - 欢迎!: index.md
-    - 计划更新: homepage/recent.md
+    - 计划更新: recent.md
   - 课程笔记:
     - 大物实验:
       - 绪论: notes/phylab/chapter_0.md
