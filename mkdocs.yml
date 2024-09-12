@@ -8,6 +8,7 @@ nav:
     - 计划更新: recent.md
   - 课程笔记:
     - 大物实验:
+      - 介绍: notes/phylab/intro.md
       - 绪论: notes/phylab/chapter_0.md
     - 天文学导论: 
       - 绪论: notes/astronomy/chapter_0.md  
@@ -15,6 +16,8 @@ nav:
 
 theme:
   name: material #主题
+  logo: images/moon.png
+  favicon: images/moon.png
   
   palette:
     #primary: blue grey
