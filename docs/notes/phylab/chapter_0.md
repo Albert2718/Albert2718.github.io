@@ -9,8 +9,8 @@
 - **存疑数字**：通过估读得到的数字。
 - **有效数字和有效位数**：测量值的可靠数加上一位存疑数的全部数字称为有效数字。其总位数称为该测量的有效位数。
 
-!!! note 例子
-    ![alt text](images/image.png){:height="80%" width="80%"}
+!!! note "例子"
+    ![alt text](images/image.png){:height="60%" width="60%"}
 
 ### 各种仪器的使用方法（待更新）
 
@@ -29,5 +29,5 @@ $$
 [为什么分母是 $n-1$ 不是 $n$ ?](https://zhuanlan.zhihu.com/p/102043269)
 
 ### 误差分类
-![alt text](images/image-1.png)
+![alt text](images/image-1.png){:height="80%" width="80%"}
 

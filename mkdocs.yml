@@ -10,10 +10,12 @@ nav:
     - 大物实验:
       - 绪论: notes/phylab/chapter_0.md
     - 天文学导论: 
-      - 第一章: notes/astronomy/chapter_1.md  
+      - 绪论: notes/astronomy/chapter_0.md  
+
 
 theme:
   name: material #主题
+  
   palette:
     #primary: blue grey
 
@@ -33,62 +35,91 @@ theme:
       toggle:
         icon: material/brightness-4
         name: 切换至日间模式
+  
   features:
-    - navigation.instant   #- header.autohide  #自动隐藏
-    #- announce.dismiss   #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
-    - navigation.tracking   #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
-    - navigation.tabs   #顶级部分将呈现在上面视口标题下方的菜单层中，但在移动设备上保持原样
-    #- navigation.tabs.sticky    #启用粘性选项卡后，导航选项卡将锁定在标题下方，并在向下滚动时始终保持可见
-    #- navigation.sections   #启用部分后，顶级部分在边栏中呈现为1220px以上视口的组，但在移动设备上保持原样
-    - navigation.top   # 返回顶部的按钮 在上滑时出现
-    - search.suggest   # 搜索输入一些字母时推荐补全整个单词
-    - search.highlight   # 搜索出的文章关键词加入高亮
-    - navigation.expand   # 打开Tab时左侧目录全部展开
-    #- navigation.indexes   #启用节索引页后，可以将文档直接附加到节
-    - search.share   #搜索分享按钮    
+    # - header.autohide #自动隐藏头栏
+    # - announce.dismiss # 公告栏
+    # - navigation.instant #这玩意跟公式爆了
+    - navigation.tracking # 在url中使用标题定位锚点
+    - navigation.path # 显示当前路径
+    - navigation.prune # 侧边栏自动折叠
+    - navigation.tabs # 顶部显示导航顶层nav（也就是第一个节点）
+    # - navigation.tabs.sticky # 滚动是隐藏顶部nav，需要配合navigation.tabs使用
+    - navigation.indexes # 指定节点index pages ，跟instant不兼容
+    - navigation.top # 一键回顶部
+    - navigation.footer # 底部导航
+    - search.highlight # 搜索高亮
+    - search.suggest # 搜索建议
+    - toc.follow # toc 跟随
+    - content.code.annotate # 代码行号
+    - content.code.copy # 代码复制  
+  
+  language: 'zh'  
 
 
 markdown_extensions:
+  # Python Markdown
   - abbr
-  - attr_list
   - admonition
+  - attr_list
   - def_list
+  - tables
   - footnotes
   - md_in_html
-  - meta # 支持Markdown文件上方自定义标题标签等
-  - pymdownx.caret
+  - toc:
+      permalink: true
+      toc_depth: 5
+      permalink_title: 点击此处可置顶内容
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.betterem
-  - pymdownx.critic
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.caret
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.mark
-  - pymdownx.snippets
   - pymdownx.smartsymbols
-  - pymdownx.tilde
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format # 代码块高亮插件
-  - pymdownx.arithmatex:  # latex支持
-      generic: true
-  - toc:
-      permalink: true # 固定标题位置为当前位置
-  - pymdownx.highlight: # 代码块高亮
-      anchor_linenums: true
-      linenums: true # 显示行号
-      # auto_title: true # 显示编程语言名称
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - markdown.extensions.toc:
-      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
-      permalink: "\ue157"
+  - pymdownx.tilde
+  # - pymdownx.snippets:
+  #     auto_append:
+  #       - includes/abbreviations.md
+        
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+        - ja
+      separator: '[\s\u200b\-]'
+  - git-revision-date-localized:
+      # type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+      enable_creation_date: true
+      exclude:
+        - index.md
+        - about.md
+
 
 extra_javascript:
   - assets/javascripts/katex.js 
@@ -98,7 +129,7 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-     
+
 extra_css:
   - assets/stylesheets/extra.css
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
