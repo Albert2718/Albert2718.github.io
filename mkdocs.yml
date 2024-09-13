@@ -12,6 +12,12 @@ nav:
       - 绪论: notes/phylab/chapter_0.md
     - 天文学导论: 
       - 绪论: notes/astronomy/chapter_0.md  
+  - 技术积累: 
+    - 技术积累: tech/index.md
+    - 数据结构:
+      - 学习资源: tech/ds/info.md
+    - Python:
+      - 学习资源: tech/python/info.md
 
 
 theme:
