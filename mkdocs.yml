@@ -13,9 +13,14 @@ nav:
     - 天文学导论: 
       - 绪论: notes/astronomy/chapter_0.md  
   - 技术积累: 
-    - 技术积累: tech/index.md
+    - 写在前面: tech/index.md
+    - LaTeX: 
+      - 写在前面: tech/latex/start.md
+      - LaTeX环境的配置: tech/latex/env.md
+      - 轻松写出第一篇文章: tech/latex/ez.md
+      - LaTeX进阶: tech/latex/pro.md
     - 数据结构:
-      - 学习资源: tech/ds/info.md
+      - 学习资源: tech/ds/info.md 
     - Python:
       - 学习资源: tech/python/info.md
 
@@ -87,9 +92,6 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.caret
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
