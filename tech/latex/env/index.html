@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#latex" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -563,6 +568,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    LaTeX环境的配置
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -573,6 +591,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置环境是什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latex_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      LaTeX常见的配置环境方法
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -747,6 +802,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置环境是什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latex_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      LaTeX常见的配置环境方法
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -761,9 +844,45 @@
                   
 
 
-  <h1>LaTeX环境的配置</h1>
-
-
+<h1 id="latex">LaTeX环境的配置<a class="headerlink" href="#latex" title="点击此处可置顶内容">&para;</a></h1>
+<p>在开始旅途之前，我们先来看看什么是LaTeX：</p>
+<p>LaTeX是一种排版语言，它的前身是TeX，20世纪70年代，斯坦福计算机系教授高德纳在编写自己的书籍《计算机编程艺术》(The Art of Computer Programming)时，觉得书的排版不够自己的要求，于是直接和学生写出了一个排版程序，名为TeX。</p>
+<p>LaTeX遵循呈现与内容分离的设计理念，以便作者可以专注于他们正在编写的内容，而不必同时注视其外观。我们只需要敲敲命令，写出内容就可以，而LaTeX排版系统需要考虑的事情就多了。也就是说，我们不必纠结于Word中调段落，调图片大小等等操作，系统会自动帮我们排版。</p>
+<p>那我们不妨先踏入LaTeX的大门，好不好用当然自己说了算~</p>
+<h2 id="_1">配置环境是什么<a class="headerlink" href="#_1" title="点击此处可置顶内容">&para;</a></h2>
+<p>打个比方，倘若你现在饿了，但你现在在家，怎么办呢？
+下面有三种吃饭环境：</p>
+<ol>
+<li>自己做</li>
+<li>下馆子</li>
+<li>点外卖</li>
+</ol>
+<p>自己做饭最麻烦，但也是最灵活自由的，想做什么做什么，想做多少做多少；点外卖则是最省事，而下馆子则是介于两者中间。</p>
+<h2 id="latex_1">LaTeX常见的配置环境方法<a class="headerlink" href="#latex_1" title="点击此处可置顶内容">&para;</a></h2>
+<p>与上面对应，LaTeX也主要有三种配置环境的方法，而我都体验过，可以总结一下~</p>
+<ol>
+<li>使用vscode在本地配置环境（自己做）  <ul>
+<li><strong>优点</strong>：开源免费，vscode各种插件和自定义设置可以让上限变得很高，详见LaTeX进阶。（此处应该设置链接直接跳转）</li>
+<li><strong>缺点</strong>：配置过程麻烦，后面也会碰到一些问题。</li>
+<li>适合已经上手LaTeX或者熟练使用vscode配置过环境的人，以及对效率有更高追求的人。</li>
+</ul>
+</li>
+<li>使用TeXstudio的集成开发环境（下馆子）<ul>
+<li><strong>优点</strong>：开源免费，为LaTeX量身定制，功能齐全，效率较高。</li>
+<li><strong>缺点</strong>：需要配置，过程相对简单（记不清了）</li>
+<li>万金油，上限和下限兼备。</li>
+</ul>
+</li>
+<li>使用Overleaf（点外卖）<ul>
+<li><strong>优点</strong>：无需配置环境，开箱即用。并且可以多人编辑，适合协作。</li>
+<li><strong>缺点</strong>：编译速度较慢，部分功能需付费，写作效率不如前两者。</li>
+<li>适合不想配置环境或者想先体验LaTeX的人。</li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
 
 
 
