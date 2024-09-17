@@ -592,6 +592,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    轻松写出第一篇文章
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -601,6 +612,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beginnow" class="md-nav__link">
+    <span class="md-ellipsis">
+      \begin{now}
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tex" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建自己的第一个.tex文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      文档的结构
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="文档的结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本要素
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -757,6 +829,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beginnow" class="md-nav__link">
+    <span class="md-ellipsis">
+      \begin{now}
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tex" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建自己的第一个.tex文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      文档的结构
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="文档的结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本要素
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -771,6 +893,50 @@
 
 
 <h1 id="_1">轻松写出第一篇文章<a class="headerlink" href="#_1" title="点击此处可置顶内容">&para;</a></h1>
+<h2 id="beginnow"><code>\begin{now}</code><a class="headerlink" href="#beginnow" title="点击此处可置顶内容">&para;</a></h2>
+<p>看到这里，我默认大家已经配置好了环境，本篇教程会全程使用Overleaf演示。</p>
+<h2 id="tex">创建自己的第一个<code>.tex</code>文件<a class="headerlink" href="#tex" title="点击此处可置顶内容">&para;</a></h2>
+<p>在Overleaf个人主页的左上角点击创建新项目中的空白项目：</p>
+<p><img alt="alt text" src="../images/image.png" /></p>
+<p>然后，就可以得到以下的页面：</p>
+<p><img alt="alt text" src="../images/image-1.png" /></p>
+<p>如果你使用的是vscode或者TeXstudio，那么创建完<code>.tex</code>文件后可以将上述指令复制进去（鼠标悬浮在下面的代码块的右上角），然后编译文件并查看：
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span> <span class="c">% Required for inserting images</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">\title</span><span class="nb">{</span>LaTeX从0到1<span class="nb">}</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">\author</span><span class="nb">{</span>Albert<span class="nb">}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">\date</span><span class="nb">{</span>September 2024<span class="nb">}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">\maketitle</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>你好！
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</span></code></pre></div>
+可能你会突然对这一些命令感到不知所措，也可能细心的你会发现中文没有在右侧显示出来，总之，你的右侧应该会渲染出和我相似的界面，我们慢慢往下看~</p>
+<h2 id="_2">文档的结构<a class="headerlink" href="#_2" title="点击此处可置顶内容">&para;</a></h2>
+<h3 id="_3">基本要素<a class="headerlink" href="#_3" title="点击此处可置顶内容">&para;</a></h3>
+<p>第一行<code>\documentclass{}</code>命令必须出现在每个LaTeX文件的开头，花括号内的文本指定了文档的类型，如果想要显示出中文，一种方法便是使用<code>ctexart</code>的文档类型:
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">\documentclass</span><span class="nb">{</span>ctexart<span class="nb">}</span>
+</span></code></pre></div>
+我们用它来替换我们原先第一行的<code>\documentclass{article}</code>，重新编译后，右侧便能够显示出中文了。</p>
+<details class="question">
+<summary>为什么我没有编译成功？</summary>
+<p>这大概率是你没有使用XeLaTeX编译，对于含有中文的文档，我们需要使用XeLaTeX来编译。</p>
+<p>OverLeaf中使用XeLaTeX编译的方法：</p>
+<ol>
+<li>点击界面左上角的菜单</li>
+<li>在<strong>编译器</strong>一栏中选择XeLaTeX</li>
+</ol>
+</details>
+<p>我们往下看看到<code>\begin{document}</code>那里，任何在<code>\begin{documnet}</code>之前的文本都被视为前导命令，会影响整个文档。任何在<code>\end{document}</code>之后的文本都会被忽视。而二者所包裹的，就是你的文本内容。</p>
+<div class="admonition success">
+<p class="admonition-title">恭喜你已经完成了LaTeX基本知识的学习！</p>
+</div>
 
 
 
@@ -793,7 +959,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月15日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月17日</span>
   </span>
 
     
