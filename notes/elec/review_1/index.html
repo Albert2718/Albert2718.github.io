@@ -1268,7 +1268,7 @@
    $$
    其中，$ i(t) $ 为流过电容的电流，$ C $ 为电容值，$ \frac{du(t)}{dt} $ 为电压的变化率。</li>
 </ol>
-<h2 id="_2">图论<a class="headerlink" href="#_2" title="点击此处可置顶内容">&para;</a></h2>
+<h2 id="_2"><a href="../docs/graph.pdf">图论</a><a class="headerlink" href="#_2" title="点击此处可置顶内容">&para;</a></h2>
 <p>由于基尔霍夫定律中也涉及到回路、网孔等图论概念，所以提前梳理图论内容以铺垫后续内容理解。</p>
 <h2 id="kvlkcl">KVL/KCL<a class="headerlink" href="#kvlkcl" title="点击此处可置顶内容">&para;</a></h2>
 <h3 id="_3">参考方向的选取<a class="headerlink" href="#_3" title="点击此处可置顶内容">&para;</a></h3>
@@ -1304,7 +1304,7 @@
 <p><img alt="alt text" src="../images/image-7.png" /></p>
 <h3 id="_7">电路的对称性<a class="headerlink" href="#_7" title="点击此处可置顶内容">&para;</a></h3>
 <div class="admonition example">
-<p class="admonition-title">例</p>
+<p class="admonition-title">例子</p>
 <p><img alt="alt text" src="../images/image-8.png" /></p>
 </div>
 <h3 id="y-">Y-△变换（重要）<a class="headerlink" href="#y-" title="点击此处可置顶内容">&para;</a></h3>
@@ -1321,12 +1321,35 @@
 </div>
 <h3 id="_10">实际电压源和电流源的等效变换<a class="headerlink" href="#_10" title="点击此处可置顶内容">&para;</a></h3>
 <p><img alt="alt text" src="../images/image-14.png" /></p>
-<h2 id="_11">电路分析的电流方法<a class="headerlink" href="#_11" title="点击此处可置顶内容">&para;</a></h2>
+<h2 id="_11"><a href="../docs/branch.pdf">电路分析的电流方法</a><a class="headerlink" href="#_11" title="点击此处可置顶内容">&para;</a></h2>
+<p>此部分内容较好理解，故将PPT放在上方链接出，下面仅给出注意事项。</p>
 <h3 id="_12">支路电流法<a class="headerlink" href="#_12" title="点击此处可置顶内容">&para;</a></h3>
+<p>容易理解，根据KCL和KVL列写方程即可。</p>
 <h3 id="_13">回路电流法<a class="headerlink" href="#_13" title="点击此处可置顶内容">&para;</a></h3>
+<blockquote>
+<p>选择支路电流参考方向，选择树，尽可能将电流源所在支路选为连支，画出单连支回路。</p>
+</blockquote>
+<p>这句话可以说是回路电流方法的精髓了，不同于网孔电流不用选择回路，仅需设出网孔的电流，回路电流法需要选择能够简化计算，信息更清楚的回路，当我们选择含有电流源的回路时，目的是让该回路电流直接等于电流源电流，这与我们其他回路的选择有关。</p>
+<div class="admonition example">
+<p class="admonition-title">例子</p>
+<p><img alt="alt text" src="../images/image-19.png" />  </p>
+</div>
+<p>如上图，这里的L3回路即做到了上述要求，这就需要我们L1回路不能通过电流源(若通过即等效于网孔电流法)，在某些电路较复杂，网孔电流法方程较多的情况下，通过观察选择适当的回路可以方便计算。</p>
 <h3 id="_14">网孔电流法<a class="headerlink" href="#_14" title="点击此处可置顶内容">&para;</a></h3>
+<p>容易理解，需要注意的是仅适用于平面电路。</p>
 <h2 id="_15">电路分析的电压方法<a class="headerlink" href="#_15" title="点击此处可置顶内容">&para;</a></h2>
 <h3 id="_16">节点电压法<a class="headerlink" href="#_16" title="点击此处可置顶内容">&para;</a></h3>
+<p><strong>节点电压：</strong>
+<img alt="alt text" src="../images/image-17.png" /></p>
+<p><strong>节点电压法的推导：</strong> 可略看，稍后会给出更好的理解。
+<img alt="alt text" src="../images/image-18.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">节点电压法本质是电路的KCL方程</p>
+<p><a href="https://zhuanlan.zhihu.com/p/593076630">参考资料</a><br />
+方程的左边是电流的流出，这里的流出指的是把流出主节点的方向看作电流的参考方向，那计算流出必然是主节点的电压减去其他节点的电压除以电阻。  </p>
+<p>而方程的右边是电流的流入，电流源那里很好理解，因为本质是KCL方程，所以与电流源串联的电阻不在方程左边的考虑范围内，那为什么和电压源串联的电阻就要考虑呢？  </p>
+<p>实际上，我们可以把电压源与电阻串联等效为电流源和电阻并联，等效的原理见<a href="./#_10">前文</a>。这样也就解释了为什么等式左边要计算和电压源串联的电阻，它实质上等效为和等效电流源并联的支路的电流；以及等式右边电压源电压与该支路电导的乘积便可以理解为等效电流源的电流。</p>
+</div>
 
 
 
@@ -1349,7 +1372,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月23日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月25日</span>
   </span>
 
     
