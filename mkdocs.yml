@@ -7,12 +7,15 @@ nav:
     - 关于我: about.md
     - 计划更新: recent.md
   - 课程笔记:
+    - 写在前面: notes/index.md
     - 大物实验:
       - 介绍: notes/phylab/intro.md
       - 绪论: notes/phylab/chapter_0.md
     - 电路与模拟电子技术:
       - 介绍: notes/elec/intro.md
       - 梳理一: notes/elec/review_1.md
+    - 复变函数与积分变换:
+      - 学习资源: notes/complex/info.md
     - 天文学导论: 
       - 绪论: notes/astronomy/chapter_0.md  
   - 技术积累: 
@@ -27,6 +30,8 @@ nav:
       - 学习资源: tech/ds/info.md 
     - Python:
       - 学习资源: tech/python/info.md
+  - 诗和远方:
+    - 写在前面: poems/index.md
 
 
 theme:
