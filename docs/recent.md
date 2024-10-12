@@ -1,5 +1,8 @@
 # 计划更新
 
+!!! note "更新ing"
+    - [x] [LaTeX教程](tech/latex/start.md)：从0开始，体验LaTeX的魅力。
+
 ## 近期
 - 大物实验chapter0笔记
 - 写完LaTeX的教程

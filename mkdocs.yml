@@ -4,7 +4,6 @@ site_author: Albert
 nav: 
   - 主页: 
     - 欢迎!: index.md
-    - 关于我: about.md
     - 计划更新: recent.md
   - 课程笔记:
     - 写在前面: notes/index.md
@@ -30,8 +29,11 @@ nav:
       - 学习资源: tech/ds/info.md 
     - Python:
       - 学习资源: tech/python/info.md
+  - 魔法世界:
+    - 写在前面: magic/index.md
   - 诗和远方:
     - 写在前面: poems/index.md
+
 
 
 theme:
