@@ -29,10 +29,13 @@ nav:
       - 学习资源: tech/ds/info.md 
     - Python:
       - 学习资源: tech/python/info.md
+  - 冻结核心: 
+    - 写在前面: core/index.md
   - 魔法世界:
     - 写在前面: magic/index.md
   - 诗和远方:
     - 写在前面: poems/index.md
+
 
 
 
