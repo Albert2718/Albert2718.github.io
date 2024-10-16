@@ -2,8 +2,9 @@ site_name: Albert's MoonBox
 site_url: https://Albert2718.github.io
 site_author: Albert
 nav: 
-  - 主页: 
-    - 欢迎!: index.md
+  - MoonBox: 
+    - "": index.md
+    - 写在前面: intro.md
     - 计划更新: recent.md
   - 课程笔记:
     - 写在前面: notes/index.md
@@ -12,11 +13,10 @@ nav:
       - 绪论: notes/phylab/chapter_0.md
     - 电路与模拟电子技术:
       - 介绍: notes/elec/intro.md
+      - 理解相量: notes/elec/phasor.md 
       - 梳理一: notes/elec/review_1.md
     - 复变函数与积分变换:
       - 学习资源: notes/complex/info.md
-    - 天文学导论: 
-      - 绪论: notes/astronomy/chapter_0.md  
   - 技术积累: 
     - 写在前面: tech/index.md
     - LaTeX: 
@@ -145,8 +145,9 @@ plugins:
 
 
 extra_javascript:
-  - assets/javascripts/katex.js 
-  # - assets/javascripts/mathjax.js
+  - js/katex.js 
+  # - js/mathjax.js
+  - js/extra.js #首页动画
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -154,7 +155,7 @@ extra_javascript:
 
 
 extra_css:
-  - assets/stylesheets/extra.css
+  - css/extra.css
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css
