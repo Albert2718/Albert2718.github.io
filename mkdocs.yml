@@ -4,21 +4,20 @@ site_author: Albert
 nav: 
   - MoonBox: 
     - "": index.md
-    - 写在前面: intro.md
     - 计划更新: recent.md
   - 课程笔记:
     - 写在前面: notes/index.md
     - 大物实验:
       - 介绍: notes/phylab/intro.md
       - 绪论: notes/phylab/chapter_0.md
-    - 电路与模拟电子技术:
-      - 介绍: notes/elec/intro.md
-      - 理解相量: notes/elec/phasor.md 
-      - 梳理一: notes/elec/review_1.md
-    - 复变函数与积分变换:
-      - 学习资源: notes/complex/info.md
   - 技术积累: 
     - 写在前面: tech/index.md
+    - LeetCode: 
+      - 写在前面: tech/leetcode/intro.md
+      - 一路楼: tech/leetcode/go.md
+    - Java: 
+      - Preface: tech/java/intro.md
+      - Chapter_0: tech/java/chapter_0.md 
     - LaTeX: 
       - 写在前面: tech/latex/intro.md
       - LaTeX环境的配置: tech/latex/env.md
@@ -31,12 +30,9 @@ nav:
     - 数据结构:
       - 写在前面: tech/ds/intro.md 
       - 绪论: tech/ds/chapter_0.md
-      - 基本数据结构: 
-        - 线性表: tech/ds/fds/linear_list.md
-        - 栈: tech/ds/fds/stack.md
-        - 队列: tech/ds/fds/queue.md
   - 冻结核心: 
     - 写在前面: core/index.md
+    - 我: core/me.md
   - 魔法世界:
     - 写在前面: magic/index.md
   - 诗和远方:
@@ -145,9 +141,9 @@ plugins:
       timezone: Asia/Shanghai
       locale: zh
       enable_creation_date: true
+      enabled: true
       exclude:
         - index.md
-        - about.md
 
 
 extra_javascript:
