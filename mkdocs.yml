@@ -5,6 +5,7 @@ nav:
   - MoonBox: 
     - "": index.md
     # - 计划更新: recent.md
+    - 简介: intro.md
   - 课程笔记:
     - 写在前面: notes/index.md
     # - 大物实验:
@@ -153,7 +154,7 @@ plugins:
       timezone: Asia/Shanghai
       locale: zh
       enable_creation_date: true
-      enabled: true
+      enabled: false
       exclude:
         - index.md
 
