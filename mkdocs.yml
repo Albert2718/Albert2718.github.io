@@ -10,6 +10,10 @@ nav:
     # - 大物实验:
     #   - 介绍: notes/phylab/intro.md
     #   - 绪论: notes/phylab/chapter_0.md
+    - 嵌入式系统: 
+      - 介绍: notes/embedded/intro.md
+      - 资源整合: notes/embedded/resource.md
+
   - 技术积累: 
     - 写在前面: tech/index.md
     # - LeetCode: 
@@ -38,6 +42,13 @@ nav:
     - 写在前面: magic/index.md
   - 诗和远方:
     - 写在前面: poems/index.md
+  - 第九艺术:
+    - 写在前面: 9art/index.md
+    - CS2: 
+      - 写在前面: 9art/cs2/index.md
+      - Ancient: 9art/cs2/ancient.md
+
+      
 
 
 
