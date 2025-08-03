@@ -23,6 +23,9 @@ nav:
     # - Java: 
     #   - Preface: tech/java/intro.md
     #   - Chapter_0: tech/java/chapter_0.md 
+    - Linux嵌入式: 
+      - 写在前面: tech/linux/index.md
+      - 开发板基础命令: tech/linux/bash.md
     - LaTeX: 
       - 写在前面: tech/latex/intro.md
       - LaTeX环境的配置: tech/latex/env.md
