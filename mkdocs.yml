@@ -26,6 +26,7 @@ nav:
     - Linux嵌入式: 
       - 写在前面: tech/linux/index.md
       - 开发板基础命令: tech/linux/bash.md
+      - conda常用命令: tech/linux/conda.md
     - LaTeX: 
       - 写在前面: tech/latex/intro.md
       - LaTeX环境的配置: tech/latex/env.md
@@ -41,7 +42,8 @@ nav:
   - 冻结核心: 
     - 写在前面: core/index.md
     - 我: core/me.md
-    - 关于热爱: core/passion.md
+    - 热爱: core/passion.md
+    - 自然: core/nature.md
   - 魔法世界:
     - 写在前面: magic/index.md
   - 诗和远方:

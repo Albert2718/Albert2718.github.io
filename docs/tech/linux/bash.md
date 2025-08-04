@@ -1,6 +1,7 @@
 ## 文件操作
+[Linux 文件与目录管理](https://www.runoob.com/linux/linux-file-content-manage.html)
 
-
+[Linux 文件基本属性](https://www.runoob.com/linux/linux-file-attr-permission.html)
 ## 网络配置
 
 ### 开启wifi
