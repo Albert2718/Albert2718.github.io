@@ -8,7 +8,7 @@
 > wlan0即无线局域网接口的名称
 
 ```sh
-if config wlan0 up
+ifconfig wlan0 up
 ```
 
 ### 连接wifi

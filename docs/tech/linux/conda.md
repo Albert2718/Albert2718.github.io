@@ -8,7 +8,7 @@ conda create --prefix ./AIChatServerEnv python=3.10
 
 ### 激活虚拟环境
 ```bash
-conda activate myenv
+conda activate ./AIChatServerEnv
 ```
 
 ### 退出虚拟环境
