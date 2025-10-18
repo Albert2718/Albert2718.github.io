@@ -1,0 +1,1250 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Albert">
+      
+      
+        <link rel="canonical" href="https://Albert2718.github.io/notes/elec/review_1/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../images/moon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>梳理一 - Albert's MoonBox</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Albert&#39;s MoonBox" class="md-header__button md-logo" aria-label="Albert's MoonBox" data-md-component="logo">
+      
+  <img src="../../../images/moon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Albert's MoonBox
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              梳理一
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="indigo"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  MoonBox
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tech/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  技术积累
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../core/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  冻结核心
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../magic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  魔法世界
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../poems/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  诗和远方
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../9art/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  第九艺术
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Albert&#39;s MoonBox" class="md-nav__button md-logo" aria-label="Albert's MoonBox" data-md-component="logo">
+      
+  <img src="../../../images/moon.png" alt="logo">
+
+    </a>
+    Albert's MoonBox
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MoonBox
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    课程笔记
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../tech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    技术积累
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../core/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    冻结核心
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../magic/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    魔法世界
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../poems/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    诗和远方
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../9art/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    第九艺术
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      R、L、C元件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="R、L、C元件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resistorr" class="md-nav__link">
+    <span class="md-ellipsis">
+      电阻元件（Resistor，R）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inductorl" class="md-nav__link">
+    <span class="md-ellipsis">
+      电感元件（Inductor，L）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capacitorc" class="md-nav__link">
+    <span class="md-ellipsis">
+      电容元件（Capacitor，C）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      图论
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kvlkcl" class="md-nav__link">
+    <span class="md-ellipsis">
+      KVL/KCL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KVL/KCL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考方向的选取
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kcl" class="md-nav__link">
+    <span class="md-ellipsis">
+      基尔霍夫电流定律（KCL）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kvl" class="md-nav__link">
+    <span class="md-ellipsis">
+      基尔霍夫电压定律（KVL）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      无源一端口的等效
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="无源一端口的等效">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      电阻的串并联
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      平衡电桥
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      电路的对称性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Y-△变换（重要）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      有源一端口的等效
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="有源一端口的等效">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      电压源、电流源的串并联
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      实际电压源和电流源的等效变换
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      电路分析的电流方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="电路分析的电流方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      支路电流法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      回路电流法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      网孔电流法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      电路分析的电压方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="电路分析的电压方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      节点电压法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">梳理一<a class="headerlink" href="#_1" title="点击此处可置顶内容">&para;</a></h1>
+<h2 id="rlc">R、L、C元件<a class="headerlink" href="#rlc" title="点击此处可置顶内容">&para;</a></h2>
+<h3 id="resistorr">电阻元件（Resistor，R）<a class="headerlink" href="#resistorr" title="点击此处可置顶内容">&para;</a></h3>
+<ol>
+<li>概念：电阻元件是一个二端元件，表现为能量消耗。电阻反映了电流在通过元件时所消耗的功率。</li>
+<li>数学关系：
+   $$
+   U = IR
+   $$
+   其中，$ U $ 为电压，$ I $ 为电流，$ R $ 为电阻值。</li>
+</ol>
+<h3 id="inductorl">电感元件（Inductor，L）<a class="headerlink" href="#inductorl" title="点击此处可置顶内容">&para;</a></h3>
+<ol>
+<li>概念：体现磁场储能的二端元件：通过变化的电流产生变化的磁场。</li>
+<li>数学关系：
+   $$
+   u(t) = L \frac{di(t)}{dt}
+   $$
+   其中，$ u(t) $ 为电感两端的电压，$ L $ 为电感量，$ \frac{di(t)}{dt} $ 为电流的变化率。</li>
+</ol>
+<h3 id="capacitorc">电容元件（Capacitor，C）<a class="headerlink" href="#capacitorc" title="点击此处可置顶内容">&para;</a></h3>
+<ol>
+<li>概念：体现电场储能的二端元件：通过极板间的电场储存电能。</li>
+<li>数学关系：
+   $$
+   i(t) = C \frac{du(t)}{dt}
+   $$
+   其中，$ i(t) $ 为流过电容的电流，$ C $ 为电容值，$ \frac{du(t)}{dt} $ 为电压的变化率。</li>
+</ol>
+<h2 id="_2"><a href="../docs/graph.pdf">图论</a><a class="headerlink" href="#_2" title="点击此处可置顶内容">&para;</a></h2>
+<p>由于基尔霍夫定律中也涉及到回路、网孔等图论概念，所以提前梳理图论内容以铺垫后续内容理解。</p>
+<h2 id="kvlkcl">KVL/KCL<a class="headerlink" href="#kvlkcl" title="点击此处可置顶内容">&para;</a></h2>
+<h3 id="_3">参考方向的选取<a class="headerlink" href="#_3" title="点击此处可置顶内容">&para;</a></h3>
+<p>电压、电流均为<strong>代数值</strong>，其正负是与选定参考方向相对应的。离开参考方向，只讲电压、电流的正负是不完整的，所以电路中电压、电流的描述和计算都必须在选定参考方向后进行。</p>
+<h3 id="kcl">基尔霍夫电流定律（KCL）<a class="headerlink" href="#kcl" title="点击此处可置顶内容">&para;</a></h3>
+<p><img alt="alt text" src="../images/image.png" />
+<strong>拓展：</strong><img alt="alt text" src="../images/image-2.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">广义节点</p>
+<p>我们可以把这种封闭面称之为广义节点，流入该封闭面和流出该封闭面的电流相等。<br />
+很多时候，当我们不关心某一封闭面内部的电流时，可以选取该封闭面为广义结点，列写KCL方程。</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">例子：求电流 <span class="arithmatex">\(I\)</span> </p>
+<p><img alt="alt text" src="../images/image-3.png" /></p>
+<details class="tip">
+<summary>解答</summary>
+<p><img alt="alt text" src="../images/image-4.png" /></p>
+<p>对节点1列写KCL得到 <span class="arithmatex">\(I^\prime=5A\)</span>;<br />
+对虚线所示闭合曲面列写KCL得到 <span class="arithmatex">\(I=-7A\)</span>  </p>
+</details>
+</div>
+<h3 id="kvl">基尔霍夫电压定律（KVL）<a class="headerlink" href="#kvl" title="点击此处可置顶内容">&para;</a></h3>
+<p><img alt="alt text" src="../images/image-1.png" />
+<img alt="alt text" src="../images/image-5.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">电路中任意两点间的电压等于两点间任一条路径经过的各元件电压的代数和。</p>
+</div>
+<h2 id="_4">无源一端口的等效<a class="headerlink" href="#_4" title="点击此处可置顶内容">&para;</a></h2>
+<h3 id="_5">电阻的串并联<a class="headerlink" href="#_5" title="点击此处可置顶内容">&para;</a></h3>
+<p><img alt="alt text" src="../images/image-6.png" /></p>
+<h3 id="_6">平衡电桥<a class="headerlink" href="#_6" title="点击此处可置顶内容">&para;</a></h3>
+<p><img alt="alt text" src="../images/image-7.png" /></p>
+<h3 id="_7">电路的对称性<a class="headerlink" href="#_7" title="点击此处可置顶内容">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">例子</p>
+<p><img alt="alt text" src="../images/image-8.png" /></p>
+</div>
+<h3 id="y-">Y-△变换（重要）<a class="headerlink" href="#y-" title="点击此处可置顶内容">&para;</a></h3>
+<p>推导内容较多，可以右键放大图片来看：</p>
+<p><img alt="alt text" src="../images/image-12.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">如上图最后一张PPT，非平衡电桥是该变换的重要应用之一。</p>
+</div>
+<h2 id="_8">有源一端口的等效<a class="headerlink" href="#_8" title="点击此处可置顶内容">&para;</a></h2>
+<h3 id="_9">电压源、电流源的串并联<a class="headerlink" href="#_9" title="点击此处可置顶内容">&para;</a></h3>
+<p><img alt="alt text" src="../images/image-15.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">本质仍然是基尔霍夫定律。</p>
+</div>
+<h3 id="_10">实际电压源和电流源的等效变换<a class="headerlink" href="#_10" title="点击此处可置顶内容">&para;</a></h3>
+<p><img alt="alt text" src="../images/image-14.png" /></p>
+<h2 id="_11"><a href="../docs/branch.pdf">电路分析的电流方法</a><a class="headerlink" href="#_11" title="点击此处可置顶内容">&para;</a></h2>
+<p>此部分内容较好理解，故将PPT放在上方链接出，下面仅给出注意事项。</p>
+<h3 id="_12">支路电流法<a class="headerlink" href="#_12" title="点击此处可置顶内容">&para;</a></h3>
+<p>容易理解，根据KCL和KVL列写方程即可。</p>
+<h3 id="_13">回路电流法<a class="headerlink" href="#_13" title="点击此处可置顶内容">&para;</a></h3>
+<blockquote>
+<p>选择支路电流参考方向，选择树，尽可能将电流源所在支路选为连支，画出单连支回路。</p>
+</blockquote>
+<p>这句话可以说是回路电流方法的精髓了，不同于网孔电流不用选择回路，仅需设出网孔的电流，回路电流法需要选择能够简化计算，信息更清楚的回路，当我们选择含有电流源的回路时，目的是让该回路电流直接等于电流源电流，这与我们其他回路的选择有关。</p>
+<div class="admonition example">
+<p class="admonition-title">例子</p>
+<p><img alt="alt text" src="../images/image-19.png" />  </p>
+</div>
+<p>如上图，这里的L3回路即做到了上述要求，这就需要我们L1回路不能通过电流源(若通过即等效于网孔电流法)，在某些电路较复杂，网孔电流法方程较多的情况下，通过观察选择适当的回路可以方便计算。</p>
+<h3 id="_14">网孔电流法<a class="headerlink" href="#_14" title="点击此处可置顶内容">&para;</a></h3>
+<p>容易理解，需要注意的是仅适用于平面电路。</p>
+<h2 id="_15">电路分析的电压方法<a class="headerlink" href="#_15" title="点击此处可置顶内容">&para;</a></h2>
+<h3 id="_16">节点电压法<a class="headerlink" href="#_16" title="点击此处可置顶内容">&para;</a></h3>
+<p><strong>节点电压：</strong>
+<img alt="alt text" src="../images/image-17.png" /></p>
+<p><strong>节点电压法的推导：</strong> 可略看，稍后会给出更好的理解。
+<img alt="alt text" src="../images/image-18.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">节点电压法本质是电路的KCL方程</p>
+<p><a href="https://zhuanlan.zhihu.com/p/593076630">参考资料</a><br />
+方程的左边是电流的流出，这里的流出指的是把流出主节点的方向看作电流的参考方向，那计算流出必然是主节点的电压减去其他节点的电压除以电阻。  </p>
+<p>而方程的右边是电流的流入，电流源那里很好理解，因为本质是KCL方程，所以与电流源串联的电阻不在方程左边的考虑范围内，那为什么和电压源串联的电阻就要考虑呢？  </p>
+<p>实际上，我们可以把电压源与电阻串联等效为电流源和电阻并联，等效的原理见<a href="./#_10">前文</a>。这样也就解释了为什么等式左边要计算和电压源串联的电阻，它实质上等效为和等效电流源并联的支路的电流；以及等式右边电压源电压与该支路电导的乘积便可以理解为等效电流源的电流。</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.prune", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "toc.follow", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../../js/katex.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+    
+  </body>
+</html>
