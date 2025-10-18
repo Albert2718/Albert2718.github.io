@@ -4,7 +4,7 @@ site_author: Albert
 nav: 
   - MoonBox: 
     - "": index.md
-    # - 计划更新: recent.md
+    # - 近期: recent.md
     - 简介: intro.md
   - 课程笔记:
     - 写在前面: notes/index.md
@@ -49,6 +49,8 @@ nav:
     - 写在前面: magic/index.md
   - 诗和远方:
     - 写在前面: poems/index.md
+    - 没有荣誉的殿堂: poems/honorless.md
+    - 西西弗斯和雨: poems/rain.md
   - 第九艺术:
     - 写在前面: 9art/index.md
     - CS2: 
