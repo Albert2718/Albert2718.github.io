@@ -41,6 +41,8 @@ nav:
     #   - 绪论: tech/ds/chapter_0.md
   - Research: 
     - 写在前面: research/index.md
+    - MobiCom: 
+      - AutoFed23: research/mobicom/AutoFed23/notes.md
   - 冻结核心: 
     - 写在前面: core/index.md
     - 我: core/me.md
@@ -59,6 +61,10 @@ nav:
     - CS2: 
       - 写在前面: 9art/cs2/index.md
       - Ancient: 9art/cs2/ancient.md
+    - SF6:
+      - 写在前面: 9art/sf6/index.md
+      
+
 
       
 
@@ -169,6 +175,7 @@ plugins:
       fallback_to_build_date: false #许回退到git 不可用时mkdocs build执行的时间
       exclude:
         - index.md
+
 
 
 extra_javascript:
