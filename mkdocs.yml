@@ -6,14 +6,14 @@ nav:
     - "": index.md
     # - 近期: recent.md
     - 简介: intro.md
-  - 课程笔记:
-    - 写在前面: notes/index.md
-    # - 大物实验:
-    #   - 介绍: notes/phylab/intro.md
-    #   - 绪论: notes/phylab/chapter_0.md
-    - 嵌入式系统: 
-      - 介绍: notes/embedded/intro.md
-      - 资源整合: notes/embedded/resource.md
+  # - 课程笔记:
+  #   - 写在前面: notes/index.md
+  #   # - 大物实验:
+  #   #   - 介绍: notes/phylab/intro.md
+  #   #   - 绪论: notes/phylab/chapter_0.md
+  #   - 嵌入式系统: 
+  #     - 介绍: notes/embedded/intro.md
+  #     - 资源整合: notes/embedded/resource.md
 
   - 技术积累: 
     - 写在前面: tech/index.md
@@ -39,18 +39,21 @@ nav:
     # - 数据结构:
     #   - 写在前面: tech/ds/intro.md 
     #   - 绪论: tech/ds/chapter_0.md
+  - Research: 
+    - 写在前面: research/index.md
   - 冻结核心: 
     - 写在前面: core/index.md
     - 我: core/me.md
     - 热爱: core/passion.md
     - 自然: core/nature.md
     - 酒精: core/alcohol.md
-  - 魔法世界:
-    - 写在前面: magic/index.md
+  # - 魔法世界:
+  #   - 写在前面: magic/index.md
   - 诗和远方:
     - 写在前面: poems/index.md
     - 没有荣誉的殿堂: poems/honorless.md
     - 西西弗斯和雨: poems/rain.md
+    - 我只需让灵魂自由一小会儿: poems/soul.md
   - 第九艺术:
     - 写在前面: 9art/index.md
     - CS2: 
@@ -162,7 +165,8 @@ plugins:
       timezone: Asia/Shanghai
       locale: zh
       enable_creation_date: true
-      enabled: false
+      enabled: true
+      fallback_to_build_date: false #许回退到git 不可用时mkdocs build执行的时间
       exclude:
         - index.md
 
