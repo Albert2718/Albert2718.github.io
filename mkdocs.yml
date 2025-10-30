@@ -1,6 +1,10 @@
 site_name: Albert's MoonBox
 site_url: https://Albert2718.github.io
 site_author: Albert
+
+repo_url: https://github.com/Albert2718/Albert2718.github.io
+repo_name: Albert2718.github.io
+
 nav: 
   - MoonBox: 
     - "": index.md
@@ -69,13 +73,12 @@ nav:
       
 
 
-
-
 theme:
   name: material #主题
   logo: images/moon.png
   favicon: images/moon.png
-  
+  icon:
+    repo: fontawesome/brands/github
   palette:
     #primary: blue grey
 

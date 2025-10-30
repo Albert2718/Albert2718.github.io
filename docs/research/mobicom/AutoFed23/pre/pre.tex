@@ -1,0 +1,182 @@
+%-----------------------------------
+%-----------------------------------
+% Beamer template made by 月栖竹坞
+% 2025.10.08
+% xelatex
+%-----------------------------------
+%-----------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+	\usetheme{Madrid}
+	\usecolortheme{rose}
+	
+	%\setbeamertemplate｛footline｝
+	%若要删除所有幻灯片中的页脚，请取消注释此行
+	
+	%\setbeamertemplate｛footline｝[页码]
+	%若要用简单的幻灯片计数替换所有幻灯片中的页脚，请取消注释此行
+	
+	%\setbeamertemplate｛导航符号｝｛｝
+	%要删除所有幻灯片底部的导航符号，请取消注释此行
+}
+
+\usepackage{graphicx} % 允许包含图像
+\usepackage{booktabs} % 允许在表中使用\toprule、\ midrule和\ bottomrule
+\usepackage[UTF8,noindent]{ctexcap}  % 使用中文输入及显示
+\usepackage[bookmarks=true]{hyperref}
+
+%-----------------------------------
+%	以下为正文
+%-----------------------------------
+
+\title[Short title]{What is your favorite mathematical quote?} 
+% 简短标题显示在每张幻灯片的底部，完整标题仅在标题页上
+
+\author{月栖竹坞} % Your name
+\institute[University] % 您的机构将出现在每张幻灯片的底部，可能是节省空间的简写
+{
+	University of XXX \\ % 你所在的机构
+	\medskip
+	\textit{XXX@mail.com} % Your email address
+}
+\date{\today} % 日期，可以更改为自定义日期
+
+\begin{document}
+	
+	\begin{frame}
+		\titlepage % 将标题页打印为第一张幻灯片
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Overview} % 目录幻灯片，注释此块以将其删除
+		\tableofcontents % 在整个演示过程中，如果您选择使用\ section｛｝和\ submission｛}命令，这些命令将自动打印在此幻灯片上，作为演示的概述
+	\end{frame}
+	
+	%-----------------------------------
+	%	开始创建PPT
+	%-----------------------------------
+	
+	\section{First Section} % 可以创建章节，以便将您的演讲组织成离散的块，所有章节和小节都会自动打印在目录中，作为演讲的概述
+	\subsection{Subsection Example 1} % 可以在一组具有共同主题的幻灯片之前创建一个小节，以进一步将您的演示分解为块
+	
+	\begin{frame}
+		\frametitle{Paragraphs of Text}
+		\textit{We have not succeeded in answering all our problems. The answers we have found only serve to raise a whole set of new questions. In some ways we feel we are as confused as
+		ever, but we believe we are confused on a higher level and about more important
+		things.}
+		
+		\rightline{Posted outside the mathematics reading room,Tromso University}
+	\end{frame}
+	
+	%------------------------------------------------
+	\subsection{Subsection Example 2}
+	
+	\begin{frame}
+		\frametitle{Bullet Points}
+		\begin{itemize}
+			\item What we do may be small, but it has a certain character of permanence.
+			\item Euclid geometry was as dazzling as first love.
+			\item Talk is cheap, solve the PDE.
+		\end{itemize}
+	\end{frame}
+	
+	%------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Blocks of Highlighted Text}
+		\begin{block}{Block 1}
+			Certainly the best times were when I was alone with mathematics: free of ambition and pretense, and indifferent to the world.
+		\end{block}
+		
+		\begin{block}{Block 2}
+			Wir müssen wissen, Wir werden wissen.
+		\end{block}
+		
+		\begin{block}{Block 3}
+			If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.	
+		\end{block}
+	\end{frame}
+	
+	%------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Multiple Columns}
+		\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+			
+			\column{.45\textwidth} % Left column and width
+			\textbf{Heading}
+			\begin{enumerate}
+				\item Statement
+				\item Explanation
+				\item Example
+			\end{enumerate}
+			
+			\column{.5\textwidth} % Right column and width
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+			
+		\end{columns}
+	\end{frame}
+	
+	%------------------------------------------------
+	\section{Second Section}
+	%------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Table}
+		\begin{table}
+			\begin{tabular}{l l l}
+				\toprule
+				\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+				\midrule
+				Treatment 1 & 0.0003262 & 0.562 \\
+				Treatment 2 & 0.0015681 & 0.910 \\
+				Treatment 3 & 0.0009271 & 0.296 \\
+				\bottomrule
+			\end{tabular}
+			\caption{Table caption}
+		\end{table}
+	\end{frame}
+	
+	%------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Theorem}
+		\begin{theorem}[Mass--energy equivalence]
+		\centerline{$E = mc^2$}
+		\end{theorem}
+	\end{frame}
+	
+	%------------------------------------------------
+	
+	\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+		\frametitle{Verbatim}
+		\begin{example}[Theorem Slide Code]
+			\begin{verbatim}
+\begin{frame}
+\frametitle{Theorem}
+\begin{theorem}[Mass--energy equivalence]
+$E = mc^2$
+\end{theorem}
+\end{frame}\end{verbatim}
+		\end{example}
+	\end{frame}
+	
+	%------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Figure}
+		includegraphics 命令用于插入图片，你提供了图片文件的名称 test，但确保在LaTeX源文件所在的目录中有名为 test 的图片文件，并且该文件的格式（如 .png、.jpg、.pdf 等）是TeX支持的格式。如果图片文件不在相同的目录中，你需要提供正确的路径。
+%		\begin{figure}
+%		\includegraphics[width=0.8\linewidth]{test}
+%		\end{figure}
+	\end{frame}
+	
+	
+	\begin{frame}
+		\Huge{\centerline{Thank you all！}}
+		\centering{{\normalsize 谢谢！}}
+	\end{frame}
+	
+\end{document} 
