@@ -44,9 +44,8 @@ nav:
 
     - Markdown:
       - 写在前面: tech/md/index.md
-      - reveal-md: 
-        - 写在前面: tech/md/reveal-md/index.md
-        - 使用指南: tech/md/reveal-md/how2use.md
+      - reveal-md: tech/md/reveal-md.md
+
       
     # - 面向对象程序设计:
     #   - 写在前面: tech/oop/intro.md
@@ -58,6 +57,7 @@ nav:
     - 写在前面: research/index.md
     - MobiCom: 
       - AutoFed23: research/mobicom/AutoFed23/notes.md
+
   - 冻结核心: 
     - 写在前面: core/index.md
     - 我: core/me.md
@@ -66,11 +66,13 @@ nav:
     - 酒精: core/alcohol.md
   # - 魔法世界:
   #   - 写在前面: magic/index.md
+
   - 诗和远方:
     - 写在前面: poems/index.md
     - 没有荣誉的殿堂: poems/honorless.md
     - 西西弗斯和雨: poems/rain.md
     - 我只需让灵魂自由一小会儿: poems/soul.md
+    
   - 第九艺术:
     - 写在前面: 9art/index.md
     - CS2: 
