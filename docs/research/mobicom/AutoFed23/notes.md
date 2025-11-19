@@ -1,4 +1,13 @@
+# Notes
+
 ## PREPARATION
+首先给出一个overview，介绍论文大概在讲什么
+
+随后列出三种自动驾驶中的困难
+
+然后给出导致的三种问题 
+
+作者如何解决 insight
 
 ### Heterogeneity-Aware
 通俗来说，毕竟不同车传感器不完全一样等等 leads to 异质性。
@@ -102,7 +111,7 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 
 e.g. 车的长度 车的高度 车的宽度 → 车的体积
 
-### SYSTEM DESIGN
+## SYSTEM DESIGN
 
 two-level design:  
 1. a multimodal OD network to fully exploit the information provided by multimodal sensors  
@@ -115,7 +124,7 @@ two-level design:
 
 ### Object Detection Basics
 
-BCE: Binary Cross Entropy Loss
+#### BCE: Binary Cross Entropy Loss
 
 用于二分类问题，衡量预测概率与真实标签之间的差异。
 $$
@@ -127,8 +136,13 @@ $$
 | $y$ | 真实标签（1表示有目标，0表示无目标）         |
 | $p$ | 模型预测为“有目标”的概率（例如0.8表示80%确定） |
 
+y=1, BCE= -log(p) → p 越接近1，损失越小  
+y=0, BCE= -log(1-p) → p 越接近0，损失越小  
 
 $L_{total} = L^{RPN}+L_{cls}+L_{reg}+L_{dir}$
+
+最后，再对所有计算出的 $y_i$ 对应的损失求和、求平均，就可以求出模型针对一组大小为N的输出的 $Loss$ 了。
+了
 
 | 名称        | 作用     | 类型         |
 | --------- | ------ | ---------- |
@@ -157,15 +171,15 @@ $$
 - \(y\)：真实值  
 - \(\hat{y}\)：模型预测值  
 
-pros: 对异常值相对不敏感 因为梯度始终为正负1
-cons: 因为梯度恒定 所以训练可能不稳定 收敛慢
+pros: 对异常值相对不敏感 因为梯度始终为正负1  
+cons: 因为梯度恒定 所以训练可能不稳定 收敛慢  
 
 ### Modality Alignment
 
 voxelize the 3-D point
 
 #### LiDAR vs Radar
-https://zhuanlan.zhihu.com/p/377559130
+<https://zhuanlan.zhihu.com/p/377559130>
 
 LiDAR的工作流程如下：
 
@@ -175,4 +189,43 @@ LiDAR的工作流程如下：
 4.  信号返回到接收器
 5.  记录一个激光脉冲
 
-#### attention
+### Feature-Level Sensor Fusion
+用一个模态的特征（例如LiDAR）生成“注意力掩码（attention mask）”，
+去增强另一个模态（Radar） 的特征表示；
+
+#### Transformer
+<https://zhuanlan.zhihu.com/p/338817680>
+
+### AutoFed Framework
+AutoFed improves the multimodal vehicle detection network in three aspects: 
+i) modifying the loss of RPN to deal with client annotation heterogeneity,   
+ii) employing an autoencoder to perform data imputation of missing sensing modalities, and   
+iii) applying a client selection strategy based on K-d tree [2] to overcome the diverged models brought by the environment and aforementioned heterogeneity.  
+
+| 模块          | 目标      | 技术                           |
+| ----------- | ------- | ---------------------------- |
+| (1) 修改的损失函数 | 处理标注异质性 | Modified Cross-Entropy (MCE) |
+| (2) 模态补全    | 处理模态异质性 | Autoencoder-based imputation |
+| (3) 客户端选择   | 处理环境异质性 | k-d tree 相似性选择               |
+
+
+#### MCE
+![alt text](images/image-1.png)
+
+$p_{th}$ 如何选择？
+
+### Autoencoder
+| 模块                         | 层数                  | 描述                 |
+| -------------------------- | ------------------- | ------------------ |
+| **Encoder**                | 4 层卷积层              | 提取输入模态的高层语义特征      |
+| **Decoder**                | 4 层反卷积层             | 从编码特征中重建另一模态       |
+| **跳跃连接（skip connections）** | 多条                  | 类似 ResNet，防止特征过度压缩 |
+| **激活函数**                   | ReLU / Sigmoid      | 保证非线性与数值稳定         |
+| **正则化**                    | Dropout + BatchNorm | 控制过拟合，提高泛化性        |
+
+### k-d tree
+<https://zhuanlan.zhihu.com/p/112246942>  
+<https://oi-wiki.org/ds/kdt/>
+
+### Summary
+![alt text](images/image-2.png)

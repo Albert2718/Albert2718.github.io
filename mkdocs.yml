@@ -27,11 +27,18 @@ nav:
     # - Java: 
     #   - Preface: tech/java/intro.md
     #   - Chapter_0: tech/java/chapter_0.md 
+    - Lifehacks:
+      - 写在前面: tech/life/index.md
+      - Steam如何批量上架CS商品: tech/life/easybatch.md
+      
     - Command:
       - 写在前面: tech/cmd/index.md
       - conda: tech/cmd/conda.md
       - Linux:
         - 嵌入式开发板基础命令: tech/cmd/linux/embedded.md
+
+    - Control Science:
+      - 写在前面: tech/cse/intro.md
 
     - LaTeX: 
       - 写在前面: tech/latex/intro.md
@@ -57,6 +64,10 @@ nav:
     - 写在前面: research/index.md
     - MobiCom: 
       - AutoFed23: research/mobicom/AutoFed23/notes.md
+
+  - 语宙星辰:
+    - 写在前面: lingstar/index.md
+
 
   - 冻结核心: 
     - 写在前面: core/index.md
