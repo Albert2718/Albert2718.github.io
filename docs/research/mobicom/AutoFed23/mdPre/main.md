@@ -452,11 +452,36 @@ ClientSelection(Wt, M):
 
 <!--v-->
 
-## Pros
+
+## Pros — Cross-Modality Attention  
+### Transformer-style Q–K–V for Multimodal Fusion  
+
+AutoFed adopts a lightweight cross-attention module directly inspired by *Attention Is All You Need*.  
+- Queries come from the current modality (e.g., radar).  
+- Keys/Values come from the complementary modality (e.g., lidar).  
+- Allows the model to **selectively retrieve** helpful information.  
+
+Cross-attention enables:  
+>One modality actively asking the other for missing details.
+
+
 
 <!--v-->
 
 ## Cons
+
+<div class="mul-cols">
+<div class="col">
+
+![alt text](images/image-8.png)
+</div>
+
+<div class="col">
+
+when $p_{th}=0$, the paper means that MCE degenerate to BCE. 
+
+However, when $p_{th}=0$, MCE will ignore any negative samples, which is not exactly the same as BCE.
+
 
 
 <!--s-->
