@@ -434,6 +434,26 @@ ClientSelection(Wt, M):
 26: return W′_{t,Imin};
 ```
 
+
+<!--v-->
+## Results
+<div class="center-img">
+  <img src="images/image-9.png" style="width:80%" data-preview-image>
+</div>
+
+<!--v-->
+
+## Results
+<div class="center-img">
+  <img src="images/image-10.png" style="width:45%" data-preview-image>
+</div>
+
+<!--v-->
+
+## Results
+<div class="center-img">
+  <img src="images/image-11.png" style="width:45%" data-preview-image>
+</div>
 <!--s-->
 
 
@@ -443,6 +463,7 @@ ClientSelection(Wt, M):
 
 <div class="middle center">
 <div style="width: 100%">
+
 
 
 # Part 4. My Thoughts on AutoFed
@@ -502,10 +523,15 @@ However, when $p_{th}=0$, MCE will ignore any negative samples, which is not exa
 
 <!--s-->
 
+<!-- 封面页 -->
 <div class="middle center">
-<div style="width:100%;">
+<div style="width: 100%">
 
 # Thank You!
+
+<hr/>
+
+Presented by [@Albert2718](https://github.com/Albert2718)
 
 </div>
 </div>
