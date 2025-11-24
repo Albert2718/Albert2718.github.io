@@ -30,6 +30,7 @@ nav:
     - Lifehacks:
       - 写在前面: tech/life/index.md
       - Steam如何批量上架CS商品: tech/life/easybatch.md
+      - FakeRun: tech/life/fakerun.md
       
     - Command:
       - 写在前面: tech/cmd/index.md
