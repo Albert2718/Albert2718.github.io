@@ -31,7 +31,10 @@ nav:
       - 写在前面: tech/life/index.md
       - Steam如何批量上架CS商品: tech/life/easybatch.md
       - FakeRun: tech/life/fakerun.md
-      
+
+    - Dark Embrace:
+      - key: tech/dark/index.md
+      - 写在前面: tech/dark/intro.md     
     - Command:
       - 写在前面: tech/cmd/index.md
       - conda: tech/cmd/conda.md
@@ -39,10 +42,10 @@ nav:
         - 嵌入式开发板基础命令: tech/cmd/linux/embedded.md
 
     - Control Science:
-      - 写在前面: tech/cse/intro.md
+      - 写在前面: tech/cse/index.md
 
     - LaTeX: 
-      - 写在前面: tech/latex/intro.md
+      - 写在前面: tech/latex/index.md
       - LaTeX环境的配置: tech/latex/env.md
       - 轻松写出第一篇文章: tech/latex/ez1.md
       - 轻松写出第二篇文章: tech/latex/ez2.md
