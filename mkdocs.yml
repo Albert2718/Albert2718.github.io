@@ -31,13 +31,11 @@ nav:
       - 写在前面: tech/life/index.md
       - Steam如何批量上架CS商品: tech/life/easybatch.md
       - FakeRun: tech/life/fakerun.md
-
-    - Dark Embrace:
-      - key: tech/dark/index.md
-      - 写在前面: tech/dark/intro.md     
+  
     - Command:
       - 写在前面: tech/cmd/index.md
       - conda: tech/cmd/conda.md
+      - 文件操作: tech/cmd/file.md
       - Linux:
         - 嵌入式开发板基础命令: tech/cmd/linux/embedded.md
 
@@ -56,6 +54,10 @@ nav:
     - Markdown:
       - 写在前面: tech/md/index.md
       - reveal-md: tech/md/reveal-md.md
+
+    - Dark Embrace:
+      - key: tech/dark/index.md
+      - 写在前面: tech/dark/intro.md   
 
       
     # - 面向对象程序设计:
@@ -95,6 +97,7 @@ nav:
       - Ancient: 9art/cs2/ancient.md
     - SF6:
       - 写在前面: 9art/sf6/index.md
+      - Jamie: 9art/sf6/jamie.md
       
 
 
