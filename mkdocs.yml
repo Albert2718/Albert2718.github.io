@@ -27,20 +27,27 @@ nav:
     # - Java: 
     #   - Preface: tech/java/intro.md
     #   - Chapter_0: tech/java/chapter_0.md 
+
+    - 机器学习:
+      - 写在前面: tech/ml/index.md
+      - 强化学习: 
+        - 写在前面: tech/ml/rl/index.md
+        - Q-learning: tech/ml/rl/qlearning.md
+
     - Lifehacks:
       - 写在前面: tech/life/index.md
       - Steam如何批量上架CS商品: tech/life/easybatch.md
       - FakeRun: tech/life/fakerun.md
   
-    - Command:
-      - 写在前面: tech/cmd/index.md
-      - conda: tech/cmd/conda.md
-      - 文件操作: tech/cmd/file.md
-      - Linux:
-        - 嵌入式开发板基础命令: tech/cmd/linux/embedded.md
+    # - Command:
+    #   - 写在前面: tech/cmd/index.md
+    #   - conda: tech/cmd/conda.md
+    #   - 文件操作: tech/cmd/file.md
+    #   - Linux:
+    #     - 嵌入式开发板基础命令: tech/cmd/linux/embedded.md
 
-    - Control Science:
-      - 写在前面: tech/cse/index.md
+    # - Control Science:
+    #   - 写在前面: tech/cse/index.md
 
     - LaTeX: 
       - 写在前面: tech/latex/index.md
@@ -49,15 +56,13 @@ nav:
       - 轻松写出第二篇文章: tech/latex/ez2.md
       - LaTeX进阶: tech/latex/pro.md
 
-    
-
     - Markdown:
       - 写在前面: tech/md/index.md
       - reveal-md: tech/md/reveal-md.md
 
-    - Dark Embrace:
-      - key: tech/dark/index.md
-      - 写在前面: tech/dark/intro.md   
+    # - Dark Embrace:
+    #   - key: tech/dark/index.md
+    #   - 写在前面: tech/dark/intro.md   
 
       
     # - 面向对象程序设计:
@@ -71,8 +76,12 @@ nav:
     - MobiCom: 
       - AutoFed23: research/mobicom/AutoFed23/notes.md
 
-  - 语宙星辰:
-    - 写在前面: lingstar/index.md
+  - 你好世界:
+    - 写在前面: hellow/index.md
+    
+
+  # - 语宙星辰:
+  #   - 写在前面: lingstar/index.md
 
 
   - 冻结核心: 
@@ -98,6 +107,15 @@ nav:
     - SF6:
       - 写在前面: 9art/sf6/index.md
       - Jamie: 9art/sf6/jamie.md
+
+  - 玩物养志:
+    - 写在前面: hobbies/index.md
+    - 花切:
+      - 写在前面: hobbies/flowercut/index.md
+    - 魔方:
+      - 写在前面: hobbies/rubiks/index.md
+    - 掌机:
+      - 写在前面: hobbies/handheld/index.md
       
 
 
