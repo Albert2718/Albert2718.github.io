@@ -19,7 +19,7 @@ nav:
   #     - 介绍: notes/embedded/intro.md
   #     - 资源整合: notes/embedded/resource.md
 
-  - 技术积累: 
+  - 基础积累: 
     - 写在前面: tech/index.md
     # - LeetCode: 
     #   - 写在前面: tech/leetcode/intro.md
@@ -28,16 +28,13 @@ nav:
     #   - Preface: tech/java/intro.md
     #   - Chapter_0: tech/java/chapter_0.md 
 
-    - 机器学习:
+    - Machine Learning:
       - 写在前面: tech/ml/index.md
-      - 强化学习: 
+      - RL: 
         - 写在前面: tech/ml/rl/index.md
         - Q-learning: tech/ml/rl/qlearning.md
 
-    - Lifehacks:
-      - 写在前面: tech/life/index.md
-      - Steam如何批量上架CS商品: tech/life/easybatch.md
-      - FakeRun: tech/life/fakerun.md
+    
   
     # - Command:
     #   - 写在前面: tech/cmd/index.md
@@ -48,6 +45,7 @@ nav:
 
     # - Control Science:
     #   - 写在前面: tech/cse/index.md
+    #   - 智能控制: tech/cse/expert.md
 
     - LaTeX: 
       - 写在前面: tech/latex/index.md
@@ -71,13 +69,17 @@ nav:
     # - 数据结构:
     #   - 写在前面: tech/ds/intro.md 
     #   - 绪论: tech/ds/chapter_0.md
-  - Research: 
+  - 格物致知: 
     - 写在前面: research/index.md
+    - AlphaZero: research/zero.md
     - MobiCom: 
       - AutoFed23: research/mobicom/AutoFed23/notes.md
 
   - 你好世界:
-    - 写在前面: hellow/index.md
+    - 写在前面: helloworld/index.md
+    - AI&&ML: 
+      - 黑白棋AI-miniZero: helloworld/ai/miniZero.md
+     
     
 
   # - 语宙星辰:
@@ -110,14 +112,18 @@ nav:
 
   - 玩物养志:
     - 写在前面: hobbies/index.md
+    - Lifehacks:
+      - 写在前面: hobbies/life/index.md
+      - Steam如何批量上架CS商品: hobbies/life/easybatch.md
+      - FakeRun: hobbies/life/fakerun.md
     - 花切:
       - 写在前面: hobbies/flowercut/index.md
     - 魔方:
       - 写在前面: hobbies/rubiks/index.md
     - 掌机:
       - 写在前面: hobbies/handheld/index.md
-      
-
+      - 概览: hobbies/handheld/overview.md
+      - TRIMUI掌机: hobbies/handheld/trimui.md
 
       
 
