@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑白棋 AI - 纯前端 MCTS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .game-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .board-section {
+            flex: 1;
+            min-width: 480px;
+        }
+
+        .board {
+            background: #2E8B57;
+            border: 3px solid #1a5c3a;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+
+        .board-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            gap: 2px;
+            background: #1a5c3a;
+            padding: 2px;
+        }
+
+        .cell {
+            width: 50px;
+            height: 50px;
+            background: #2E8B57;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+            position: relative;
+        }
+
+        .cell:hover {
+            background: #3a9f6a;
+        }
+
+        .cell.legal-move {
+            background: rgba(255, 215, 0, 0.3);
+        }
+
+        .cell.legal-move::after {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: rgba(255, 215, 0, 0.6);
+            border-radius: 50%;
+        }
+
+        .piece {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .piece.black {
+            background: radial-gradient(circle at 30% 30%, #444, #000);
+            border: 2px solid #222;
+        }
+
+        .piece.white {
+            background: radial-gradient(circle at 30% 30%, #fff, #ddd);
+            border: 2px solid #ccc;
+        }
+
+        .piece.black::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+        }
+
+        .piece.white::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+        }
+
+        .control-panel {
+            flex: 0 0 300px;
+            min-width: 300px;
+        }
+
+        .status {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .status h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .score {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+
+        .score-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .score-piece {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+        }
+
+        .score-piece.black {
+            background: #000;
+        }
+
+        .score-piece.white {
+            background: #fff;
+            border: 2px solid #ccc;
+        }
+
+        .current-turn {
+            padding: 15px;
+            background: #fff3cd;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #856404;
+        }
+
+        .ai-settings {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .ai-settings h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .setting-group {
+            margin-bottom: 15px;
+        }
+
+        .setting-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .setting-group select,
+        .setting-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+        }
+
+        .btn-secondary {
+            background: #2196F3;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #1976D2;
+        }
+
+        .thinking {
+            background: #ff9800;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .game-over {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #1976d2;
+        }
+
+        .info h4 {
+            margin-bottom: 10px;
+        }
+
+        .info ul {
+            margin-left: 20px;
+        }
+
+        .info li {
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .game-container {
+                flex-direction: column;
+            }
+
+            .board-section,
+            .control-panel {
+                min-width: 100%;
+            }
+
+            .board-grid {
+                grid-template-columns: repeat(8, 40px);
+                grid-template-rows: repeat(8, 40px);
+            }
+
+            .cell {
+                width: 40px;
+                height: 40px;
+            }
+
+            .piece {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚫ 黑白棋 AI ⚪</h1>
+        
+        <div class="game-container">
+            <div class="board-section">
+                <div class="board">
+                    <div class="board-grid" id="board"></div>
+                </div>
+            </div>
+
+            <div class="control-panel">
+                <div class="status">
+                    <h3>游戏状态</h3>
+                    <div class="score">
+                        <div class="score-item">
+                            <div class="score-piece black"></div>
+                            <span id="blackScore">2</span>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-piece white"></div>
+                            <span id="whiteScore">2</span>
+                        </div>
+                    </div>
+                    <div class="current-turn" id="currentTurn">轮到: ⚫ 黑棋</div>
+                    <div id="thinkingStatus"></div>
+                </div>
+
+                <div class="ai-settings">
+                    <h3>AI 设置</h3>
+                    <div class="setting-group">
+                        <label>⚫ 黑棋玩家:</label>
+                        <select id="blackPlayer">
+                            <option value="human">人类玩家</option>
+                            <option value="ai">AI (MCTS)</option>
+                        </select>
+                    </div>
+                    <div class="setting-group">
+                        <label>⚪ 白棋玩家:</label>
+                        <select id="whitePlayer">
+                            <option value="human">人类玩家</option>
+                            <option value="ai" selected>AI (MCTS)</option>
+                        </select>
+                    </div>
+                    <div class="setting-group">
+                        <label>MCTS 模拟次数: <span id="playoutValue">1000</span></label>
+                        <input type="range" id="playout" min="100" max="5000" step="100" value="1000">
+                    </div>
+                    <div class="setting-group">
+                        <label>
+                            <input type="checkbox" id="showHints" checked>
+                            显示合法落子提示
+                        </label>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button class="btn-primary" onclick="newGame()">🔄 新游戏</button>
+                    <button class="btn-secondary" onclick="undoMove()">↩️ 悔棋</button>
+                </div>
+
+                <div id="gameOverMsg"></div>
+
+                <div class="info">
+                    <h4>📖 游戏说明</h4>
+                    <ul>
+                        <li>黑白棋规则：夹住对方棋子即可翻转</li>
+                        <li>MCTS：蒙特卡洛树搜索算法</li>
+                        <li>完全前端运行，无需服务器</li>
+                        <li>模拟次数越高，AI越强但越慢</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="reversi-board.js"></script>
+    <script src="reversi-mcts.js"></script>
+    <script src="reversi-game.js"></script>
+</body>
+</html>

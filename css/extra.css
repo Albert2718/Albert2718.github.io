@@ -1,23 +1,48 @@
 button.md-top {
     font-family: LXGW WenKai;
-    /* 修改字体 */
     font-size: 16px;
-    /* 修改字体大小 */
     font-weight: lighter;
-    /* 修改字体粗细 */
     color: #518FC1;
-    /* 修改字体颜色 */
 }
 
 :root {
     --md-text-font: "LXGW WenKai";
 }
 
-/* 字体 */
-
-
 .ml3 {
     font-weight: 900;
     font-size: 30px;
     font-family: LXGW WenKai;
 }
+
+h2::before, h3::before, h4::before {
+    content: "# ";
+}
+
+
+/* 正文区域 */
+.md-typeset {
+    font-size: 16.6px;
+}
+
+/* 标题样式 */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+    font-weight: 500;     
+}
+
+
+/* 粗体更明显 */
+.md-typeset strong,
+.md-typeset b {
+    font-weight: 600;
+}
+
+/* 顶部导航栏（MoonBox、基础积累、格物致知...） */
+.md-tabs__link {
+    font-size: 15px;          /* 调大，默认约 14px */
+}
+
+
