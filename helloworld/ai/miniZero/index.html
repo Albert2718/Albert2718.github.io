@@ -1034,6 +1034,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        黑白棋
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1547,6 +1558,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        黑白棋
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1986,7 +2008,7 @@ $$
 P'(s,a) = (1 - \varepsilon) \cdot P(s,a) + \varepsilon \cdot \eta_a
 $$</p>
 <p>其中：<br />
-- <span class="arithmatex">\(\varepsilon\)</span> 是噪声权重，通常取 0.25<br />
+- <span class="arithmatex">\(\varepsilon\)</span> 是噪声权重
 - <span class="arithmatex">\(\eta \sim \text{Dir}(\alpha)\)</span> 是 Dirichlet 分布采样的噪声  </p>
 <p><strong>为什么只在根节点加噪声</strong>？</p>
 <p>AI生成的，说的很好：
@@ -2043,6 +2065,40 @@ $$</p>
 </tr>
 </tbody>
 </table>
+<h2 id="_12">黑白棋<a class="headerlink" href="#_12" title="点击此处可置顶内容">&para;</a></h2>
+<p>介绍完了核心的一些算法，最后来谈谈黑白棋吧。</p>
+<p>在AlphaGo Zero的训练中，其可以一步步学习到一些特殊的围棋技巧或者一些定式：
+<img alt="alt text" src="../images/image-4.png" /></p>
+<p>而黑白棋中的奥秘也有很多，可以参考知乎问题：<a href="https://www.zhihu.com/question/25271618">玩黑白棋有什么技巧？</a></p>
+<p>简要来说：</p>
+<ul>
+<li>棋盘的四个角落很重要，所以说，角落邻近的位置很危险，一旦在这些位置落子，往往会被对手占据角落。  </li>
+<li>尽量在游戏初期减少自己的棋子数量，尽量被对手的棋子围在中间，这点和围棋刚好相反  </li>
+</ul>
+<p>我自己也和AI下了很多局，发现像我一样的新手在前期下黑白棋很容易陷入贪心，总想着一步可以吃掉多少子，就算明白一些位置的危险性，但在剩下的可以行动的位置中，还是想着多吃子，实则，黑白棋是一款很看重全局观的游戏，注重对局面的控制，前期的布局目的是为了让自己有更多的棋可下，而不是能吃掉多少棋。这在黑白棋中被称作<strong>行动力</strong>：</p>
+<p><img alt="alt text" src="../images/image-5.png" />
+<img alt="alt text" src="../images/image-6.png" /></p>
+<blockquote>
+<p>黑棋：白棋=1：12，绝对劣势。
+<strong>在尾盘之前，对黑白棋局势的判断，应基于双方行动力的多少，而不是子数。偏激一点说，黑白棋的争夺，就是对行动力的争夺。</strong></p>
+</blockquote>
+<p>所以可以看看NN和普通MCTS对弈的结果，两边都是模拟1000次：</p>
+<p><img alt="alt text" src="../images/benchmark_results.png" /></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>胜负统计:
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  NN 胜利:   8 局 (80.0%)
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>  MCTS 胜利: 2 局 (20.0%)
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>  平局:      0 局 (0.0%)
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  NN 胜率:   0.800
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>耗时统计:
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>  NN 总耗时:   421.6s (平均 42.2s/局)
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  MCTS 总耗时: 738.8s (平均 73.9s/局)
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>角落占据统计:
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>  NN 占据角落:   30 个 (平均 3.00/局)
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>  MCTS 占据角落: 10 个 (平均 1.00/局)
+</span></code></pre></div>
+<p>不可思议，我们或许不知道他究竟理解了什么，但NN明显学会了很多黑白棋的精髓。</p>
 
 
 
@@ -2065,7 +2121,7 @@ $$</p>
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年12月23日 12:15:14 CST">2025年12月23日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年12月23日 20:53:16 CST">2025年12月23日</span>
   </span>
 
     
