@@ -1357,60 +1357,60 @@
 <p>BTW，是ALPHA不是AIPHA，之前一直以为是AI......</p>
 <h2 id="alphago">AlphaGO 全系列<a class="headerlink" href="#alphago" title="点击此处可置顶内容">&para;</a></h2>
 <p>先回顾一下AlphaGO全系列吧：</p>
-<p>1️⃣ <strong>《Mastering the game of Go with deep neural networks and tree search》</strong></p>
+<p>1️⃣ 《Mastering the game of Go with deep neural networks and tree search》</p>
 <ul>
-<li><strong>作者</strong>：Silver et al. (DeepMind)</li>
-<li><strong>期刊</strong>：<em>Nature</em>, 2016</li>
-<li><strong>通常称为</strong>：AlphaGo（初代）</li>
+<li>作者：Silver et al. (DeepMind)</li>
+<li>期刊：<em>Nature</em>, 2016</li>
+<li>通常称为：AlphaGo（初代）</li>
 </ul>
-<p><strong>核心贡献</strong></p>
+<p>核心贡献</p>
 <ul>
 <li>
 <p>首次将：</p>
-</li>
-<li>
-<p><strong>策略网络（Policy Network）</strong></p>
-</li>
-<li><strong>价值网络（Value Network）</strong></li>
-<li><strong>蒙特卡洛树搜索（MCTS）</strong>
+<ul>
+<li>策略网络（Policy Network）</li>
+<li>价值网络（Value Network）</li>
+<li>蒙特卡洛树搜索（MCTS）
 深度结合</li>
-<li>先用<strong>人类棋谱监督学习</strong>，再用<strong>自我对弈强化学习</strong></li>
+<li>先用人类棋谱监督学习，再用自我对弈强化学习</li>
 </ul>
-<p><strong>意义</strong></p>
+</li>
+</ul>
+<p>意义</p>
 <ul>
 <li>第一次击败人类职业围棋顶尖选手</li>
 <li>奠定了 AlphaZero 的技术框架雏形</li>
 </ul>
 <hr />
-<p>2️⃣ <strong>《Mastering the game of Go without human knowledge》</strong></p>
+<p>2️⃣ 《Mastering the game of Go without human knowledge》</p>
 <ul>
-<li><strong>作者</strong>：Silver et al.</li>
-<li><strong>期刊</strong>：<em>Nature</em>, 2017</li>
-<li><strong>通常称为</strong>：AlphaGo Zero</li>
+<li>作者：Silver et al.</li>
+<li>期刊：<em>Nature</em>, 2017</li>
+<li>通常称为：AlphaGo Zero</li>
 </ul>
-<p><strong>核心贡献</strong></p>
+<p>核心贡献</p>
 <ul>
-<li><strong>完全不使用人类棋谱</strong></li>
+<li>完全不使用人类棋谱</li>
 <li>
 <p>只依靠：</p>
-</li>
-<li>
-<p>自我对弈</p>
-</li>
-<li>单一神经网络同时输出 <strong>Policy + Value</strong></li>
+<ul>
+<li>自我对弈</li>
+<li>单一神经网络同时输出 Policy + Value</li>
 <li>用一个统一网络替代 AlphaGo 的多个网络</li>
 </ul>
-<p><strong>关键创新</strong></p>
+</li>
+</ul>
+<p>关键创新</p>
 <ul>
-<li><strong>端到端自我博弈</strong></li>
+<li>端到端自我博弈</li>
 <li>神经网络直接学习棋感，而非模仿人类</li>
 </ul>
 <hr />
-<p>3️⃣ <strong>《Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm》</strong></p>
+<p>3️⃣ 《Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm》</p>
 <ul>
-<li><strong>作者</strong>：Silver et al.</li>
-<li><strong>期刊</strong>：<em>Science</em>, 2018</li>
-<li><strong>正式名称</strong>：AlphaZero</li>
+<li>作者：Silver et al.</li>
+<li>期刊：<em>Science</em>, 2018</li>
+<li>正式名称：AlphaZero</li>
 </ul>
 <blockquote>
 <p>AlphaZero相对于AlphaGo Zero的改进不算大，毕竟也就只差2个月。它的贡献在于，证明了DRL对于很多棋类都是有效的。</p>
@@ -1426,26 +1426,30 @@
 <p>AlphaZero使用一个深度神经网络 <span class="arithmatex">\(f_\theta(s)\)</span> 同时输出两个值：
 $$
 (\mathbf{p}, v) = f_\theta(s)
-$$
-- <strong>策略向量 <span class="arithmatex">\(\mathbf{p}\)</span></strong>：每个合法动作的概率分布 <span class="arithmatex">\(p_a = Pr(a|s)\)</span><br />
-- <strong>价值标量 <span class="arithmatex">\(v\)</span></strong>：当前局面的期望结果 <span class="arithmatex">\(v \approx \mathbb{E}[z|s]\)</span>  </p>
+$$</p>
+<ul>
+<li>策略向量 <span class="arithmatex">\(\mathbf{p}\)</span>：每个合法动作的概率分布 <span class="arithmatex">\(p_a = Pr(a|s)\)</span>  </li>
+<li>价值标量 <span class="arithmatex">\(v\)</span>：当前局面的期望结果 <span class="arithmatex">\(v \approx \mathbb{E}[z|s]\)</span>  </li>
+</ul>
 <h3 id="mcts">蒙特卡洛树搜索（MCTS）<a class="headerlink" href="#mcts" title="点击此处可置顶内容">&para;</a></h3>
 <p>AlphaZero采用MCTS，但不同的是，到达叶节点不再rollout，而是用神经网络评估，更详细地关于MCTS的内容，可以参见我的<a href="../../helloworld/ai/miniZero/">这篇文章</a>。</p>
 <ol>
-<li><strong>选择阶段</strong>：从根节点开始，每次选择访问次数低、策略概率高、价值估计高的动作</li>
-<li><strong>扩展与评估</strong>：到达叶节点时，用神经网络评估</li>
-<li><strong>回传</strong>：将评估结果沿路径回传更新统计量</li>
-<li><strong>决策</strong>：根据根节点各动作的访问次数分布 <span class="arithmatex">\(\boldsymbol{\pi}\)</span> 选择落子</li>
+<li>选择阶段：从根节点开始，每次选择访问次数低、策略概率高、价值估计高的动作</li>
+<li>扩展与评估：到达叶节点时，用神经网络评估</li>
+<li>回传：将评估结果沿路径回传更新统计量</li>
+<li>决策：根据根节点各动作的访问次数分布 <span class="arithmatex">\(\boldsymbol{\pi}\)</span> 选择落子</li>
 </ol>
 <h2 id="_4">训练过程<a class="headerlink" href="#_4" title="点击此处可置顶内容">&para;</a></h2>
 <p>训练的损失函数为：
 $$
 l = (z - v)^2 - \boldsymbol{\pi}^\top \log \mathbf{p} + c|\theta|^2
-$$
-三项分别是：
-- <strong>价值损失</strong>：预测值与实际游戏结果的均方误差<br />
-- <strong>策略损失</strong>：神经网络策略与MCTS搜索结果的交叉熵<br />
-- <strong>L2正则化</strong>：防止过拟合  </p>
+$$</p>
+<p>三项分别是：  </p>
+<ul>
+<li>价值损失：预测值与实际游戏结果的均方误差  </li>
+<li>策略损失：神经网络策略与MCTS搜索结果的交叉熵  </li>
+<li>L2正则化：防止过拟合  </li>
+</ul>
 <p>训练数据完全来自自我博弈产生的 <span class="arithmatex">\((s_t, \boldsymbol{\pi}_t, z)\)</span> 三元组。</p>
 <h2 id="_5">状态与动作表示<a class="headerlink" href="#_5" title="点击此处可置顶内容">&para;</a></h2>
 <p>在AlphaGo Zero中，一共使用了17个 19×19 的二值特征平面来描述当前局面，其中前16个平面描述了最近8步对应的双方player的棋子位置，最后一个平面描述当前player对应的棋子颜色，其实也就是先后手。</p>
@@ -1476,7 +1480,7 @@ $$
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年12月19日 21:40:40 CST">2025年12月19日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年12月23日 12:14:16 CST">2025年12月23日</span>
   </span>
 
     
