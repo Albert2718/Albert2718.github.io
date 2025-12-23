@@ -1867,14 +1867,18 @@ U(s,a) = c_{puct} \cdot P(s,a) \cdot \frac{\sqrt{N(s)}}{1 + N(s,a)}
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>        ├─────┘   └─────┘
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        利用项     探索项
 </span></code></pre></div>
-<p>利用项 Q(s,a)：<br />
-  - 该动作历史上的平均回报（注意，回报也是神经网络预测的胜负）<br />
-  - 倾向于选择已知的好动作  </p>
-<p>探索项 U(s,a)： <br />
-  - 鼓励尝试访问次数少的动作<br />
-  - P(s,a) 大 → 神经网络认为这是好棋 → 优先探索<br />
-  - N(s,a) 小 → 访问次数少 → 值得探索<br />
-  - N(s) 大   → 父节点访问多 → 该多探索子节点了  </p>
+<p>利用项 Q(s,a)： </p>
+<ul>
+<li>该动作历史上的平均回报（注意，回报也是神经网络预测的胜负）</li>
+<li>倾向于选择已知的好动作</li>
+</ul>
+<p>探索项 U(s,a)：   </p>
+<ul>
+<li>鼓励尝试访问次数少的动作</li>
+<li>P(s,a) 大 → 神经网络认为这是好棋 → 优先探索</li>
+<li>N(s,a) 小 → 访问次数少 → 值得探索</li>
+<li>N(s) 大   → 父节点访问多 → 该多探索子节点了</li>
+</ul>
 <h4 id="ai_1">AI生成的动态行为演示<a class="headerlink" href="#ai_1" title="点击此处可置顶内容">&para;</a></h4>
 <p>假设某节点有 3 个子动作，初始状态：
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>初始 (N_parent = 0):
@@ -2061,7 +2065,7 @@ $$</p>
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年12月23日 12:14:16 CST">2025年12月23日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年12月23日 12:15:14 CST">2025年12月23日</span>
   </span>
 
     
