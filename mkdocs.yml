@@ -28,11 +28,11 @@ nav:
     #   - Preface: tech/java/intro.md
     #   - Chapter_0: tech/java/chapter_0.md 
 
-    - Machine Learning:
-      - 写在前面: tech/ml/index.md
-      - RL: 
-        - 写在前面: tech/ml/rl/index.md
-        - Q-learning: tech/ml/rl/qlearning.md
+    # - Machine Learning:
+    #   - 写在前面: tech/ml/index.md
+    #   - RL: 
+    #     - 写在前面: tech/ml/rl/index.md
+    #     - Q-learning: tech/ml/rl/qlearning.md
 
     
   
@@ -90,8 +90,8 @@ nav:
     - 写在前面: core/index.md
     - 我: core/me.md
     - 热爱: core/passion.md
-    - 自然: core/nature.md
-    - 酒精: core/alcohol.md
+    # - 自然: core/nature.md
+    # - 酒精: core/alcohol.md
   # - 魔法世界:
   #   - 写在前面: magic/index.md
 
@@ -100,35 +100,35 @@ nav:
     - 没有荣誉的殿堂: poems/honorless.md
     - 西西弗斯和雨: poems/rain.md
     - 我只需让灵魂自由一小会儿: poems/soul.md
-    - 林宛瑜: poems/lwy.md
-    - 林宛瑜pt.2: poems/lwypt2.md
-    - 林宛瑜pt.3: poems/lwypt3.md
-    - 林婉瑜pt.4: poems/lwypt4.md
+    # - 林宛瑜: poems/lwy.md
+    # - 林宛瑜pt.2: poems/lwypt2.md
+    # - 林宛瑜pt.3: poems/lwypt3.md
+    # - 林婉瑜pt.4: poems/lwypt4.md
 
     
-  - 第九艺术:
-    - 写在前面: 9art/index.md
-    - CS2: 
-      - 写在前面: 9art/cs2/index.md
-      - Ancient: 9art/cs2/ancient.md
-    - SF6:
-      - 写在前面: 9art/sf6/index.md
-      - Jamie: 9art/sf6/jamie.md
+  # - 第九艺术:
+  #   - 写在前面: 9art/index.md
+  #   - CS2: 
+  #     - 写在前面: 9art/cs2/index.md
+  #     - Ancient: 9art/cs2/ancient.md
+  #   - SF6:
+  #     - 写在前面: 9art/sf6/index.md
+  #     - Jamie: 9art/sf6/jamie.md
 
-  - 玩物养志:
-    - 写在前面: hobbies/index.md
-    - Lifehacks:
-      - 写在前面: hobbies/life/index.md
-      - Steam如何批量上架CS商品: hobbies/life/easybatch.md
-      - FakeRun: hobbies/life/fakerun.md
-    - 花切:
-      - 写在前面: hobbies/flowercut/index.md
-    - 魔方:
-      - 写在前面: hobbies/rubiks/index.md
-    - 掌机:
-      - 写在前面: hobbies/handheld/index.md
-      - 概览: hobbies/handheld/overview.md
-      - TRIMUI掌机: hobbies/handheld/trimui.md
+  # - 玩物养志:
+  #   - 写在前面: hobbies/index.md
+  #   - Lifehacks:
+  #     - 写在前面: hobbies/life/index.md
+  #     - Steam如何批量上架CS商品: hobbies/life/easybatch.md
+  #     - FakeRun: hobbies/life/fakerun.md
+  #   - 花切:
+  #     - 写在前面: hobbies/flowercut/index.md
+  #   - 魔方:
+  #     - 写在前面: hobbies/rubiks/index.md
+  #   - 掌机:
+  #     - 写在前面: hobbies/handheld/index.md
+  #     - 概览: hobbies/handheld/overview.md
+  #     - TRIMUI掌机: hobbies/handheld/trimui.md
 
       
 
